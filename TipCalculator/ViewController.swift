@@ -31,6 +31,13 @@ class ViewController: UIViewController {
             tipControl.selectedSegmentIndex=intTipPercentageIndex
             calculateTip(self)
         }
+
+        let lastUsageDate = defaults.object(forKey: "lastUsageDate") as! NSDate?
+        
+        if lastUsageDate !== nil && (lastUsageDate?.timeIntervalSinceNow)! > (-1 * 60 * 8) {
+            billField.text = defaults.string(forKey: "lastUsageBillValue")
+        }
+        
         billField.becomeFirstResponder()
     }
     
@@ -57,6 +64,11 @@ class ViewController: UIViewController {
         
             tipLabel.text = String(format: "$%.2f", tip)
             totalLabel.text = String(format: "$%.2f", total)
+            
+            let defaults = UserDefaults.standard
+            defaults.set(NSDate(), forKey: "lastUsageDate")
+            defaults.set(billField.text, forKey: "lastUsageBillValue")
+
         } else {
             UIView.animate(withDuration: 0.4, animations: {
                 self.resultsView.alpha = 0
