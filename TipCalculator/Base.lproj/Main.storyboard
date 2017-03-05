@@ -95,10 +95,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="billField" destination="cCG-NH-Eya" id="BBS-K4-XAc"/>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="GE4-tg-fun"/>
                         <outlet property="resultsView" destination="CvS-iB-yR5" id="Zhf-zB-fGo"/>
+                        <outlet property="separatorView" destination="eE8-68-nra" id="0Vk-ux-kJZ"/>
                         <outlet property="tipControl" destination="jW8-9J-Unu" id="Dey-VB-tKP"/>
                         <outlet property="tipLabel" destination="v9a-J3-CgM" id="kQP-Qi-DX2"/>
+                        <outlet property="tipTitleLabel" destination="T16-aa-PCO" id="sfn-f0-b2I"/>
                         <outlet property="totalLabel" destination="qz8-Tl-HR7" id="fyO-8T-ZWc"/>
+                        <outlet property="totalTitleLabel" destination="NU1-wG-nej" id="ykH-7e-67l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -137,12 +141,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="App Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QTd-HS-T80">
+                                <rect key="frame" x="16" y="100" width="103" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="lkz-hW-v0P">
+                                <rect key="frame" x="16" y="137" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Light"/>
+                                    <segment title="Dark"/>
+                                </segments>
+                                <connections>
+                                    <action selector="themeUpdate:" destination="6sg-HY-iGN" eventType="valueChanged" id="Cgo-id-zhT"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.69221994639999995" green="0.88671361829999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="a5Y-m3-td1"/>
                     <connections>
+                        <outlet property="mainView" destination="QJp-Il-cDS" id="Nft-xj-tzd"/>
+                        <outlet property="themeControl" destination="lkz-hW-v0P" id="Z4l-fX-Tv3"/>
+                        <outlet property="themeLabel" destination="QTd-HS-T80" id="7VF-ZP-IJU"/>
                         <outlet property="tipControl" destination="715-jp-OfY" id="ZpR-aV-f98"/>
+                        <outlet property="tipLabel" destination="rR7-20-xNs" id="t8s-yA-yTo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zd6-6J-Zip" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -17,6 +17,7 @@
 		955AFA761E6B5953002DCF2C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955AFA751E6B5953002DCF2C /* SettingsViewController.swift */; };
 		955AFA781E6B6603002DCF2C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 955AFA771E6B6603002DCF2C /* README.md */; };
 		955AFA7A1E6B6B29002DCF2C /* tip_calculator_anim.gif in Resources */ = {isa = PBXBuildFile; fileRef = 955AFA791E6B6B29002DCF2C /* tip_calculator_anim.gif */; };
+		955AFA7E1E6C7646002DCF2C /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955AFA7D1E6C7646002DCF2C /* Style.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		955AFA751E6B5953002DCF2C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		955AFA771E6B6603002DCF2C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		955AFA791E6B6B29002DCF2C /* tip_calculator_anim.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tip_calculator_anim.gif; sourceTree = "<group>"; };
+		955AFA7D1E6C7646002DCF2C /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				955AFA4C1E6A3CB0002DCF2C /* Assets.xcassets */,
 				955AFA4E1E6A3CB0002DCF2C /* LaunchScreen.storyboard */,
 				955AFA511E6A3CB0002DCF2C /* Info.plist */,
+				955AFA7D1E6C7646002DCF2C /* Style.swift */,
 			);
 			path = TipCalculator;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				955AFA461E6A3CB0002DCF2C /* AppDelegate.swift in Sources */,
 				955AFA781E6B6603002DCF2C /* README.md in Sources */,
 				955AFA761E6B5953002DCF2C /* SettingsViewController.swift in Sources */,
+				955AFA7E1E6C7646002DCF2C /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
