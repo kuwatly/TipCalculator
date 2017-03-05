@@ -14,11 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
-
+    @IBOutlet weak var resultsView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.resultsView.alpha = 0
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +31,7 @@ class ViewController: UIViewController {
             tipControl.selectedSegmentIndex=intTipPercentageIndex
             calculateTip(self)
         }
+        billField.becomeFirstResponder()
     }
     
     
@@ -42,14 +45,24 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculateTip(_ sender: AnyObject) {
-        let tipPercentages = [0.18, 0.2, 0.25]
+        if (billField.hasText) {
+            UIView.animate(withDuration: 0.4, animations: {
+                self.resultsView.alpha = 1
+            })
+            let tipPercentages = [0.18, 0.2, 0.25]
         
-        let bill = Double(billField.text!) ?? 0
-        let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
-        let total = bill + tip
+            let bill = Double(billField.text!) ?? 0
+            let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
+            let total = bill + tip
         
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+            tipLabel.text = String(format: "$%.2f", tip)
+            totalLabel.text = String(format: "$%.2f", total)
+        } else {
+            UIView.animate(withDuration: 0.4, animations: {
+                self.resultsView.alpha = 0
+            })
+            
+        }
     }
 }
 
